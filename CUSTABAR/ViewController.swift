@@ -7,13 +7,61 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    
+    private let photos = ["maccha", "vanilla", "darkmocha", "caramel"]
+    private let titles = ["抹茶", "バニラ", "ダークモカ", "キャラメル"]
+    private let star = ["★★★★★", "★★★☆☆","★★☆☆☆","★☆☆☆☆"]
+    private let color: [UIColor] = [UIColor(red: 195/255, green: 232/255, blue: 248/255, alpha: 1.0), UIColor(red: 248/255, green: 240/255, blue: 143/255, alpha: 1.0), UIColor(red: 225/255, green: 248/255, blue: 157/255, alpha: 1.0), UIColor(red: 248/255, green: 199/255, blue: 244/255, alpha: 1.0)]
+    private let price = ["¥ 670", "¥ 650", "¥ 720", "¥ 560"]
+    private let comment = ["抹茶がいい", "バニラ感が強い", "ダークモカが美味しい", "キャラメル好き"]
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    // １つのセクションの中に表示するセル（要素）の数。
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photos.count
+    }
+
+    // セル（要素）に表示する内容
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // "Cell" の部分は　Storyboard でつけた cell の identifier。
+        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+
+        // Tag番号を使ってインスタンスをつくる
+        let backColorLabel = cell.contentView.viewWithTag(1)  as! UILabel
+        backColorLabel.backgroundColor = color[indexPath.row]
+        
+        let photoImageView = cell.contentView.viewWithTag(2)  as! UIImageView
+        let photoImage = UIImage(named: photos[indexPath.row])
+        photoImageView.image = photoImage
+
+        let productLabel = cell.contentView.viewWithTag(3) as! UILabel
+        productLabel.text = titles[indexPath.row]
+        
+        let priceLabel = cell.contentView.viewWithTag(4) as! UILabel
+        priceLabel.text = price[indexPath.row]
+        
+        let starLabel = cell.contentView.viewWithTag(5) as! UILabel
+        starLabel.text = star[indexPath.row]
+        
+        let commentLabel = cell.contentView.viewWithTag(6) as! UILabel
+        commentLabel.text = comment[indexPath.row]
+        
+        return cell
+    
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let width: CGFloat = collectionView.frame.width / 1.2
+        let height: CGFloat = collectionView.frame.height / 7.2
+        return CGSize(width: width, height: height)
+    }
+
 
 }
-

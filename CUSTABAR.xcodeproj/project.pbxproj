@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E92DC2DF265A3A4F0029CE9B /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DC2DE265A3A4F0029CE9B /* OrderViewController.swift */; };
 		E93EF78F2659273700FB9F5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EF78E2659273700FB9F5A /* AppDelegate.swift */; };
 		E93EF7912659273700FB9F5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EF7902659273700FB9F5A /* SceneDelegate.swift */; };
 		E93EF7932659273700FB9F5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EF7922659273700FB9F5A /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E92DC2DE265A3A4F0029CE9B /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		E93EF78B2659273700FB9F5A /* CUSTABAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CUSTABAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93EF78E2659273700FB9F5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E93EF7902659273700FB9F5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				E93EF7972659273B00FB9F5A /* Assets.xcassets */,
 				E93EF7992659273B00FB9F5A /* LaunchScreen.storyboard */,
 				E93EF79C2659273B00FB9F5A /* Info.plist */,
+				E92DC2DE265A3A4F0029CE9B /* OrderViewController.swift */,
 			);
 			path = CUSTABAR;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				E93EF7932659273700FB9F5A /* ViewController.swift in Sources */,
 				E93EF78F2659273700FB9F5A /* AppDelegate.swift in Sources */,
+				E92DC2DF265A3A4F0029CE9B /* OrderViewController.swift in Sources */,
 				E93EF7912659273700FB9F5A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,14 +290,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 2K446D59RQ;
 				INFOPLIST_FILE = CUSTABAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.yonpachi.takahashi.CUSTABAR;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.com.lifeistech.kasutaba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "L13-Takahashi-Develop";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,14 +311,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 2K446D59RQ;
 				INFOPLIST_FILE = CUSTABAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.yonpachi.takahashi.CUSTABAR;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.com.lifeistech.kasutaba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "L13-Takahashi-Distribution";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
