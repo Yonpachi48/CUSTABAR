@@ -10,10 +10,13 @@
 		E92DC2DF265A3A4F0029CE9B /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DC2DE265A3A4F0029CE9B /* OrderViewController.swift */; };
 		E93EF78F2659273700FB9F5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EF78E2659273700FB9F5A /* AppDelegate.swift */; };
 		E93EF7912659273700FB9F5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EF7902659273700FB9F5A /* SceneDelegate.swift */; };
-		E93EF7932659273700FB9F5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EF7922659273700FB9F5A /* ViewController.swift */; };
+		E93EF7932659273700FB9F5A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EF7922659273700FB9F5A /* ListViewController.swift */; };
 		E93EF7962659273700FB9F5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E93EF7942659273700FB9F5A /* Main.storyboard */; };
 		E93EF7982659273B00FB9F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E93EF7972659273B00FB9F5A /* Assets.xcassets */; };
 		E93EF79B2659273B00FB9F5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E93EF7992659273B00FB9F5A /* LaunchScreen.storyboard */; };
+		E9ACE9B9265E955000C4587E /* VAL-UltraBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9ACE9B8265E955000C4587E /* VAL-UltraBlack.ttf */; };
+		E9ACE9BD265FCF6100C4587E /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ACE9BC265FCF6100C4587E /* ProductsViewController.swift */; };
+		E9ACE9BF2660797200C4587E /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ACE9BE2660797200C4587E /* CustomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +24,14 @@
 		E93EF78B2659273700FB9F5A /* CUSTABAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CUSTABAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93EF78E2659273700FB9F5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E93EF7902659273700FB9F5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E93EF7922659273700FB9F5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E93EF7922659273700FB9F5A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		E93EF7952659273700FB9F5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E93EF7972659273B00FB9F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E93EF79A2659273B00FB9F5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E93EF79C2659273B00FB9F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9ACE9B8265E955000C4587E /* VAL-UltraBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAL-UltraBlack.ttf"; sourceTree = "<group>"; };
+		E9ACE9BC265FCF6100C4587E /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		E9ACE9BE2660797200C4587E /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +66,12 @@
 			children = (
 				E93EF78E2659273700FB9F5A /* AppDelegate.swift */,
 				E93EF7902659273700FB9F5A /* SceneDelegate.swift */,
-				E93EF7922659273700FB9F5A /* ViewController.swift */,
+				E9ACE9BC265FCF6100C4587E /* ProductsViewController.swift */,
+				E93EF7922659273700FB9F5A /* ListViewController.swift */,
+				E9ACE9BE2660797200C4587E /* CustomViewController.swift */,
 				E93EF7942659273700FB9F5A /* Main.storyboard */,
 				E93EF7972659273B00FB9F5A /* Assets.xcassets */,
+				E9ACE9B8265E955000C4587E /* VAL-UltraBlack.ttf */,
 				E93EF7992659273B00FB9F5A /* LaunchScreen.storyboard */,
 				E93EF79C2659273B00FB9F5A /* Info.plist */,
 				E92DC2DE265A3A4F0029CE9B /* OrderViewController.swift */,
@@ -130,6 +139,7 @@
 				E93EF79B2659273B00FB9F5A /* LaunchScreen.storyboard in Resources */,
 				E93EF7982659273B00FB9F5A /* Assets.xcassets in Resources */,
 				E93EF7962659273700FB9F5A /* Main.storyboard in Resources */,
+				E9ACE9B9265E955000C4587E /* VAL-UltraBlack.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,10 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E93EF7932659273700FB9F5A /* ViewController.swift in Sources */,
+				E93EF7932659273700FB9F5A /* ListViewController.swift in Sources */,
 				E93EF78F2659273700FB9F5A /* AppDelegate.swift in Sources */,
 				E92DC2DF265A3A4F0029CE9B /* OrderViewController.swift in Sources */,
+				E9ACE9BF2660797200C4587E /* CustomViewController.swift in Sources */,
 				E93EF7912659273700FB9F5A /* SceneDelegate.swift in Sources */,
+				E9ACE9BD265FCF6100C4587E /* ProductsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

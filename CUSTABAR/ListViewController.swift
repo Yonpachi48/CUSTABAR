@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     
     private let photos = ["maccha", "vanilla", "darkmocha", "caramel"]
@@ -21,12 +21,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // NavigationBarを表示したい場合
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [
+                    // 文字の色
+            .foregroundColor: UIColor(red: 5/255, green: 132/255, blue: 144/255, alpha: 1.0),
+            NSAttributedString.Key.font: UIFont(name: "VAL",size: 35)!
+           
+                ]
     }
 
     // １つのセクションの中に表示するセル（要素）の数。
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
     }
+    
 
     // セル（要素）に表示する内容
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -52,6 +64,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let commentLabel = cell.contentView.viewWithTag(6) as! UILabel
         commentLabel.text = comment[indexPath.row]
+        
+        let HeightLine = cell.contentView.viewWithTag(7)  as! UILabel
+        HeightLine.backgroundColor = UIColor(red: 166/255, green: 170/255, blue: 169/255, alpha: 1.0)
         
         return cell
     
