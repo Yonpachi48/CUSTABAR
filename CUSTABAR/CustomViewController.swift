@@ -20,6 +20,9 @@ class CustomViewController: UIViewController,UITextFieldDelegate, UITableViewDel
     var items1: NSMutableArray = ["バニラ", "キャラメル", "シンプルクラシック", "アーモンドトフィー", "モカ", "ホワイトモカ","チャイ"]
     var items2: NSMutableArray = ["チョコ", "キャラメル"]
     var items: [NSMutableArray] = []
+    var rowListArray = [Int]()
+    var itemListArray = [Int]()
+    var sortArray = [Int]()
     
     // 処理分岐用
     var tag:Int = 0
@@ -37,7 +40,12 @@ class CustomViewController: UIViewController,UITextFieldDelegate, UITableViewDel
         tableView1.dataSource = self
         tableView2.delegate = self
         tableView2.dataSource = self
-
+        
+        //  複数選択を有効にする
+        tableView0.allowsMultipleSelectionDuringEditing = true
+        tableView1.allowsMultipleSelectionDuringEditing = true
+        tableView2.allowsMultipleSelectionDuringEditing = true
+        
         // 表示用データの配列を配列にする
         items.append(items0)
         items.append(items1)
@@ -75,8 +83,37 @@ class CustomViewController: UIViewController,UITextFieldDelegate, UITableViewDel
         // セルにテキストを出力する。
         let cell = tableView.dequeueReusableCell(withIdentifier:  cellIdentifier, for:indexPath as IndexPath)
         cell.textLabel?.text = items[tag][indexPath.row] as? String
+        
+        //  セルの選択時の背景色を消す
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
+        //  セルの選択状況の判定
+        if (rowListArray.contains(indexPath.row)){
+            cell.accessoryType = .checkmark
+        }else{
+            cell.accessoryType = .none
+        }
 
         return cell
+    }
+    
+    // 選択時のの動作
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let cell = tableView.cellForRow(at: indexPath)
+        // 選択したセルにチェックマークが無い場合
+        if(cell?.accessoryType == UITableViewCell.AccessoryType.none){
+            cell?.accessoryType = .checkmark
+            self.rowListArray.append(indexPath.row)
+        }else{
+        // 選択したセルにチェックマークがある場合
+            cell?.accessoryType = .none
+            let  listNumber = rowListArray.filter ({ (n:Int) -> Bool in
+                if n != indexPath.row{
+                    return true
+                }else{
+                    return false
+                }})
+            rowListArray = listNumber
+        }
     }
     
 
@@ -86,3 +123,4 @@ class CustomViewController: UIViewController,UITextFieldDelegate, UITableViewDel
     }
 
 }
+
